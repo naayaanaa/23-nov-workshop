@@ -4,13 +4,15 @@ import os
 from uuid import UUID
 
 from dotenv import load_dotenv
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from postgrest import APIError
 from supabase import Client, create_client
 
 load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
 app = Flask(__name__)
+FRONTEND_DIR = os.path.join(os.path.dirname(__file__), "frontend")
+FRONTEND_ASSETS = {"app.js", "config.js", "styles.css"}
 
 
 @app.after_request
@@ -48,11 +50,14 @@ def database_error(error):
 
 @app.get("/")
 def index():
-    return jsonify(message="Events API", endpoints=[
-        "GET /api/events", "GET /api/events/<id>", "POST /api/registrations",
-        "GET /api/me/registrations?user_id=<uuid>",
-        "GET /api/events/<id>/registrations?organizer_id=<uuid>",
-    ])
+    return send_from_directory(FRONTEND_DIR, "index.html")
+
+
+@app.get("/<path:asset>")
+def frontend_asset(asset):
+    if asset not in FRONTEND_ASSETS:
+        return jsonify(error="Not found"), 404
+    return send_from_directory(FRONTEND_DIR, asset)
 
 
 @app.get("/health")
