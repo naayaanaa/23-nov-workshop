@@ -5,8 +5,10 @@ from uuid import UUID
 
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request, send_from_directory
+import httpx
 from postgrest import APIError
 from supabase import Client, create_client
+from supabase.client import ClientOptions
 
 load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
@@ -26,7 +28,13 @@ def add_cors_headers(response):
 supabase_url = os.getenv("SUPABASE_URL")
 supabase_key = os.getenv("SUPABASE_PUBLISHABLE_KEY") or os.getenv("SUPABASE_KEY")
 supabase: Client | None = (
-    create_client(supabase_url, supabase_key) if supabase_url and supabase_key else None
+    create_client(
+        supabase_url,
+        supabase_key,
+        options=ClientOptions(httpx_client=httpx.Client(timeout=120, trust_env=False)),
+    )
+    if supabase_url and supabase_key
+    else None
 )
 
 
@@ -46,6 +54,10 @@ def valid_uuid(value):
 def database_error(error):
     # Supabase/PostgREST errors are returned as JSON rather than Flask HTML.
     return jsonify(error=getattr(error, "message", str(error))), 400
+
+
+def supabase_connection_error():
+    return jsonify(error="Could not connect to Supabase. Check the network and SUPABASE_URL."), 503
 
 
 @app.get("/")
@@ -79,6 +91,8 @@ def list_events():
         return jsonify(data=result.data)
     except APIError as exc:
         return database_error(exc)
+    except httpx.RequestError:
+        return supabase_connection_error()
 
 
 @app.get("/api/events/<event_id>")
@@ -96,6 +110,8 @@ def get_event(event_id):
         return jsonify(data=result.data[0])
     except APIError as exc:
         return database_error(exc)
+    except httpx.RequestError:
+        return supabase_connection_error()
 
 
 @app.post("/api/registrations")
@@ -131,6 +147,8 @@ def create_registration():
         if "duplicate" in message.lower() or "unique" in message.lower():
             return jsonify(error="User is already registered for this event"), 409
         return database_error(exc)
+    except httpx.RequestError:
+        return supabase_connection_error()
 
 
 @app.get("/api/me/registrations")
@@ -146,6 +164,8 @@ def my_registrations():
         return jsonify(data=result.data)
     except APIError as exc:
         return database_error(exc)
+    except httpx.RequestError:
+        return supabase_connection_error()
 
 
 @app.get("/api/events/<event_id>/registrations")
@@ -169,6 +189,8 @@ def event_registrations(event_id):
         return jsonify(data=result.data)
     except APIError as exc:
         return database_error(exc)
+    except httpx.RequestError:
+        return supabase_connection_error()
 
 
 if __name__ == "__main__":
