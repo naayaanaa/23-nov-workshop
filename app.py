@@ -56,6 +56,13 @@ def database_error(error):
     return jsonify(error=getattr(error, "message", str(error))), 400
 
 
+REGISTRABLE_EVENT_STATUSES = {"open", "active", "published", "upcoming"}
+
+
+def is_registration_open(status):
+    return not status or status.lower() in REGISTRABLE_EVENT_STATUSES
+
+
 def supabase_connection_error():
     return jsonify(error="Could not connect to Supabase. Check the network and SUPABASE_URL."), 503
 
@@ -130,7 +137,7 @@ def create_registration():
         if not event_result.data:
             return jsonify(error="Event not found"), 404
         event = event_result.data[0]
-        if event.get("status") and event["status"].lower() not in ("open", "active", "published"):
+        if not is_registration_open(event.get("status")):
             return jsonify(error="Event is not open for registration"), 409
         if event.get("capacity") is not None:
             count_result = client.table("registrations").select("id", count="exact").eq("event_id", event_id).execute()

@@ -8,3 +8,5 @@ Static frontend for the Flask API in `../backend/app.py`.
 4. Use the profile button to save your user UUID before registering or viewing your registrations.
 
 The organizer portal asks for the organizer UUID and an event, then uses the API's organizer ownership check. UUIDs are stored only in this browser's local storage.
+
+Use the **View** selector to switch between Student and Organizer views. Student view is the default and hides the organizer attendee list. This view selector changes the interface; it is not an authentication boundary.
