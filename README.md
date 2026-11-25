@@ -1,6 +1,6 @@
 # Campus Connect API and frontend
 
-This repository deploys both the Flask API and static frontend to one Vercel project. The frontend files in `public/` are served by Vercel's CDN; Flask handles the `/api/...` routes on the same domain.
+This repository includes the Flask API, the frontend source and design references in `frontend/`, and a deployable frontend copy in `public/`. Vercel serves `public/` from its CDN and Flask handles the `/api/...` routes on the same domain.
 
 ## Deploy to Vercel
 
@@ -11,6 +11,6 @@ This repository deploys both the Flask API and static frontend to one Vercel pro
 
 ## Local development
 
-Set the Supabase values in `.env` and run `python app.py` from this directory. Serve the sibling `../frontend/` folder with a static server. Its config automatically calls the backend at `http://localhost:5000`; on Vercel, it uses the same origin.
+Set the Supabase values in `.env` and run `python app.py` from this directory. Serve `frontend/` with a static server. Its config automatically calls the backend at `http://localhost:5000`; on Vercel, it uses the same origin.
 
-Keep the four files `index.html`, `config.js`, `app.js`, and `styles.css` in `public/` synchronized with the corresponding files in `../frontend/` when changing the UI.
+Keep the four files `index.html`, `config.js`, `app.js`, and `styles.css` in `public/` synchronized with the corresponding files in `frontend/` when changing the UI.

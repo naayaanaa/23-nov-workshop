@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#f8f9ff","on-tertiary":"#ffffff","on-tertiary-container":"#fafdff","pastel-pink-tint":"#fdf2f8","on-primary":"#ffffff","on-primary-fixed-variant":"#004b73","on-secondary-container":"#fffbff","on-primary-container":"#fdfcff","outline":"#707881","surface-clean":"#ffffff","error-container":"#ffdad6","on-surface-variant":"#3f4850","pastel-cyan-tint":"#f0fdfa","border-pink-tint":"#fce7f3","inverse-on-surface":"#eaf1ff","primary-fixed":"#cce5ff","primary-container":"#007bb9","pastel-cyan-base":"#7dd3fc","secondary-fixed-dim":"#ffb1c7","secondary":"#b5005d","surface-wash":"#f8fafc","primary":"#006194","on-primary-fixed":"#001d31","pastel-pink-base":"#f472b6","tertiary-container":"#007f9d","on-secondary-fixed":"#3f001c","surface-bright":"#f8f9ff","surface-dim":"#cbdbf5","secondary-fixed":"#ffd9e2","tertiary-fixed":"#b7eaff","surface-variant":"#d3e4fe","border-subtle":"#e2e8f0","surface-container-low":"#eff4ff","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","on-tertiary-fixed":"#001f28","on-error-container":"#93000a","on-surface":"#0b1c30","surface-tint":"#006398","inverse-surface":"#213145","on-background":"#0b1c30","pastel-cyan-light":"#a5f3fc","tertiary-fixed-dim":"#6cd3f7","surface-container":"#e5eeff","inverse-primary":"#93ccff","on-tertiary-fixed-variant":"#004e61","pastel-pink-light":"#fbcfe8","background":"#f8f9ff","error":"#ba1a1a","tertiary":"#00647c","border-cyan-tint":"#cffafe","outline-variant":"#bfc7d2","primary-fixed-dim":"#93ccff","surface-container-highest":"#d3e4fe","secondary-container":"#da2676","on-error":"#ffffff","on-secondary-fixed-variant":"#8e0048","surface-container-high":"#dce9ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","margin":"2rem","space-md":"1rem","space-sm":"0.5rem","margin-mobile":"1rem","gutter":"1.5rem","space-xl":"2.5rem","space-lg":"1.5rem","gutter-mobile":"0.75rem"},fontFamily:{"headline-lg":["Plus Jakarta Sans"],"label-md":["Space Grotesk"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-sm":["Space Grotesk"],"display-hero":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"]},fontSize:{"headline-lg":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-sm":["18px",{lineHeight:"26px",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"headline-md":["22px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"display-hero":["52px",{lineHeight:"60px",letterSpacing:"-0.03em",fontWeight:"800"}],"display-hero-mobile":["34px",{lineHeight:"42px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-8 flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-pastel-cyan-light flex items-center justify-center shadow-[0_2px_10px_rgba(125,211,252,0.35)]"><span class="material-symbols-outlined text-primary text-[20px]">hub</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">CAMPUS <span class="text-primary">CONNECT</span></span></div></div><div class="flex items-center gap-4"><button aria-label="Notifications" class="relative p-2 rounded-full hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full bg-pastel-pink-base shadow-[0_0_8px_rgba(244,114,182,0.6)]"></span></button><div class="flex items-center gap-2 pl-2"><div class="w-9 h-9 rounded-full bg-pastel-pink-light border border-pink-tint flex items-center justify-center shadow-[0_2px_8px_rgba(244,114,182,0.2)]"><span class="font-label-md text-label-md text-secondary font-bold">N</span></div></div></div></div></header><aside class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-surface-wash shadow-[0_1px_8px_rgba(0,0,0,0.03)] z-40 flex flex-col justify-between py-6 px-4"><div class="space-y-6"><nav class="space-y-1.5" data-active-classes="bg-pastel-cyan-tint text-primary font-bold shadow-[0_2px_12px_rgba(125,211,252,0.18)]"><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="organizer-portal" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span class="font-body-md text-body-md">Home</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="registered-events" href="#"><span class="material-symbols-outlined text-[20px]">confirmation_number</span><span class="font-body-md text-body-md">Registered</span></a><a aria-current="page" class="flex items-center gap-3 px-3.5 py-2.5 rounded-full transition-all bg-pastel-cyan-tint text-primary font-bold shadow-[0_2px_12px_rgba(125,211,252,0.18)]" data-path="event-calendar" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span class="font-body-md text-body-md">Event Calendar</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="event-details" href="#"><span class="material-symbols-outlined text-[20px]">visibility</span><span class="font-body-md text-body-md">Event Details</span></a></nav><div class="pt-4"><p class="px-3 mb-3 font-label-sm text-label-sm uppercase tracking-wider text-outline">View Mode</p><div class="space-y-2 bg-surface rounded-xl p-3 shadow-[0_2px_12px_-2px_rgba(125,211,252,0.12)]"><label class="flex items-center justify-between cursor-pointer select-none py-1.5 px-2 rounded-lg hover:bg-surface-container-low transition-colors"><span class="font-body-sm text-body-sm text-on-surface font-medium">Organizer</span><input checked="" class="w-4 h-4 rounded border-outline-variant text-secondary accent-pastel-pink-base focus:ring-0 focus:outline-none cursor-pointer" name="view-organizer" type="checkbox"/></label><label class="flex items-center justify-between cursor-pointer select-none py-1.5 px-2 rounded-lg hover:bg-surface-container-low transition-colors"><span class="font-body-sm text-body-sm text-on-surface font-medium">Student</span><input class="w-4 h-4 rounded border-outline-variant text-primary accent-pastel-cyan-base focus:ring-0 focus:outline-none cursor-pointer" name="view-student" type="checkbox"/></label></div></div></div><div class="p-3.5 rounded-xl bg-pastel-pink-tint"><div class="flex items-center gap-2.5 mb-1"><span class="material-symbols-outlined text-secondary text-[18px]">verified</span><span class="font-label-md text-label-md text-secondary">Campus Pulse Live</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Nayana (Design Club &amp; Council Lead)</p></div></aside><div class="pl-64"><main class="relative pt-16 w-full px-8 bg-surface min-h-screen"><div class="flex flex-col w-full pb-16 space-y-8">
+<!-- Top Banner / Header & Quick Stats -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pt-4">
+<div class="space-y-1 max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pastel-cyan-tint text-primary font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-pastel-cyan-base animate-pulse"></span>
+        Interactive Academic Term Q1
+      </div>
+<h1 class="font-headline-lg text-headline-lg font-bold tracking-tight text-on-surface">Campus Event Calendar</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Browse schedules, view room bookings, and synchronize your academic &amp; social campus calendar.
+      </p>
+</div>
+<!-- Quick Action / Mini Status Bar -->
+<div class="flex items-center gap-3 self-start lg:self-auto">
+<div class="flex items-center bg-surface-clean px-4 py-2.5 rounded-full shadow-[0_4px_18px_-2px_rgba(125,211,252,0.15)] gap-3">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full bg-pastel-pink-light flex items-center justify-center font-label-sm text-label-sm text-secondary font-bold ring-2 ring-surface-clean">AR</div>
+<div class="w-7 h-7 rounded-full bg-pastel-cyan-light flex items-center justify-center font-label-sm text-label-sm text-primary font-bold ring-2 ring-surface-clean">DK</div>
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-label-sm text-on-surface-variant ring-2 ring-surface-clean">+18</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Live attending March events</span>
+</div>
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-clean shadow-[0_4px_18px_-2px_rgba(125,211,252,0.15)] hover:bg-surface-container-low transition-colors text-primary font-label-md text-label-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Sync iCal</span>
+</button>
+</div>
+</div>
+<!-- Calendar Control Bar -->
+<div class="bg-surface-clean rounded-2xl p-4 lg:p-6 shadow-[0_4px_18px_-2px_rgba(125,211,252,0.15)] space-y-5">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<!-- Date Navigator & View Switcher -->
+<div class="flex flex-wrap items-center gap-3">
+<!-- Month Navigator -->
+<div class="flex items-center bg-surface-container-low rounded-full px-2 py-1">
+<button aria-label="Previous Month" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-clean transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface px-4 min-w-[140px] text-center select-none">
+            March 2024
+          </span>
+<button aria-label="Next Month" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-clean transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+<!-- Today Button -->
+<button class="px-4 py-2 rounded-full bg-pastel-cyan-tint text-primary hover:bg-pastel-cyan-light font-label-md text-label-md font-bold transition-all shadow-[0_2px_10px_rgba(125,211,252,0.2)]" type="button">
+          Today
+        </button>
+<span class="text-outline-variant font-light hidden sm:inline">|</span>
+<!-- View Mode (Month / Week / Day) -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-full">
+<button class="px-3.5 py-1.5 rounded-full bg-surface-clean font-label-md text-label-md text-primary font-bold shadow-[0_2px_8px_rgba(0,0,0,0.06)]" type="button">Month</button>
+<button class="px-3.5 py-1.5 rounded-full text-on-surface-variant font-label-md text-label-md hover:text-on-surface transition-colors" type="button">Week</button>
+<button class="px-3.5 py-1.5 rounded-full text-on-surface-variant font-label-md text-label-md hover:text-on-surface transition-colors" type="button">Day</button>
+</div>
+</div>
+<!-- Search & Quick Filter -->
+<div class="relative w-full md:w-72">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full bg-surface-container-low pl-10 pr-4 py-2 rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-clean transition-all" placeholder="Search sessions, halls..." type="text"/>
+</div>
+</div>
+<!-- Category Filter Chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none pt-1">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-pastel-cyan-base text-on-primary-fixed font-label-md text-label-md font-bold shadow-[0_4px_14px_rgba(125,211,252,0.4)] flex items-center gap-2" type="button">
+<span class="w-2 h-2 rounded-full bg-on-primary"></span>
+        All Categories
+      </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-pastel-cyan-tint text-primary hover:bg-pastel-cyan-light/70 font-label-md text-label-md font-semibold transition-colors flex items-center gap-2" type="button">
+<span class="w-2 h-2 rounded-full bg-pastel-cyan-base"></span>
+        Technical &amp; Hackathons
+      </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-pastel-pink-tint text-secondary hover:bg-pastel-pink-light/70 font-label-md text-label-md font-semibold transition-colors flex items-center gap-2" type="button">
+<span class="w-2 h-2 rounded-full bg-pastel-pink-base"></span>
+        Cultural &amp; Arts
+      </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-md text-label-md font-medium transition-colors flex items-center gap-2" type="button">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim"></span>
+        Academic &amp; Guest Seminars
+      </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-md text-label-md font-medium transition-colors flex items-center gap-2" type="button">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span>
+        Sports &amp; Wellness
+      </button>
+</div>
+</div>
+<!-- Calendar Grid + Side Schedule Split -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+<!-- 7-Column Monthly Calendar Grid (Span 8) -->
+<div class="xl:col-span-8 bg-surface-clean rounded-2xl p-5 md:p-6 shadow-[0_4px_18px_-2px_rgba(125,211,252,0.15)] flex flex-col space-y-3">
+<!-- Day Names Header -->
+<div class="grid grid-cols-7 gap-2 text-center pb-2">
+<span class="font-label-md text-label-md font-semibold text-outline uppercase tracking-wider">Mon</span>
+<span class="font-label-md text-label-md font-semibold text-outline uppercase tracking-wider">Tue</span>
+<span class="font-label-md text-label-md font-semibold text-outline uppercase tracking-wider">Wed</span>
+<span class="font-label-md text-label-md font-semibold text-outline uppercase tracking-wider">Thu</span>
+<span class="font-label-md text-label-md font-semibold text-outline uppercase tracking-wider">Fri</span>
+<span class="font-label-md text-label-md font-semibold text-outline uppercase tracking-wider text-secondary">Sat</span>
+<span class="font-label-md text-label-md font-semibold text-outline uppercase tracking-wider text-secondary">Sun</span>
+</div>
+<!-- Month Cells (March 2024 starts on Friday) -->
+<div class="grid grid-cols-7 gap-2.5 auto-rows-fr">
+<!-- Previous Month Days (Feb 26 - 29) -->
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-wash/60 text-outline-variant flex flex-col justify-between opacity-50">
+<span class="font-body-sm text-body-sm font-medium">26</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-wash/60 text-outline-variant flex flex-col justify-between opacity-50">
+<span class="font-body-sm text-body-sm font-medium">27</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-wash/60 text-outline-variant flex flex-col justify-between opacity-50">
+<span class="font-body-sm text-body-sm font-medium">28</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-wash/60 text-outline-variant flex flex-col justify-between opacity-50">
+<span class="font-body-sm text-body-sm font-medium">29</span>
+</div>
+<!-- March 1 to 3 -->
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">1</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">2</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">3</span>
+</div>
+<!-- March 4 to 10 -->
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">4</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">5</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">6</span>
+<div class="mt-1.5 px-1.5 py-0.5 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm truncate">
+            Council Sync
+          </div>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">7</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">8</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">9</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">10</span>
+</div>
+<!-- March 11 to 17 -->
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">11</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">12</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">13</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">14</span>
+</div>
+<!-- Mar 15: Campus Photography Expo -->
+<div class="min-h-[105px] p-2 rounded-xl bg-pastel-pink-tint/50 hover:bg-pastel-pink-tint transition-all flex flex-col justify-between shadow-[0_2px_8px_rgba(244,114,182,0.15)] group cursor-pointer">
+<div class="flex justify-between items-center">
+<span class="font-body-sm text-body-sm font-bold text-secondary">15</span>
+<span class="w-1.5 h-1.5 rounded-full bg-pastel-pink-base"></span>
+</div>
+<div class="mt-1 px-1.5 py-1 rounded bg-surface-clean/90 text-secondary font-label-sm text-label-sm font-semibold truncate shadow-sm">
+            📷 Photography Expo (10:00 AM)
+          </div>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">16</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">17</span>
+</div>
+<!-- March 18 to 24 -->
+<!-- Mar 18: Robotics Hands-on Workshop -->
+<div class="min-h-[105px] p-2 rounded-xl bg-pastel-cyan-tint/60 hover:bg-pastel-cyan-tint transition-all flex flex-col justify-between shadow-[0_2px_8px_rgba(125,211,252,0.15)] cursor-pointer">
+<div class="flex justify-between items-center">
+<span class="font-body-sm text-body-sm font-bold text-primary">18</span>
+<span class="w-1.5 h-1.5 rounded-full bg-pastel-cyan-base"></span>
+</div>
+<div class="mt-1 px-1.5 py-1 rounded bg-surface-clean/90 text-primary font-label-sm text-label-sm font-semibold truncate shadow-sm">
+            🤖 Robotics Workshop (2:00 PM)
+          </div>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">19</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">20</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">21</span>
+</div>
+<!-- Mar 22: Annual Tech Hackathon - Day 1 -->
+<div class="min-h-[105px] p-2 rounded-xl bg-pastel-cyan-tint hover:bg-pastel-cyan-light/50 transition-all flex flex-col justify-between shadow-[0_2px_10px_rgba(125,211,252,0.2)] cursor-pointer">
+<div class="flex justify-between items-center">
+<span class="font-body-sm text-body-sm font-bold text-primary">22</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+</div>
+<div class="mt-1 px-2 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold truncate shadow-sm">
+            ⚡ Tech Hackathon Day 1
+          </div>
+</div>
+<!-- Mar 23: Annual Tech Hackathon - Day 2 & Demos -->
+<div class="min-h-[105px] p-2 rounded-xl bg-pastel-cyan-tint hover:bg-pastel-cyan-light/50 transition-all flex flex-col justify-between shadow-[0_2px_10px_rgba(125,211,252,0.2)] cursor-pointer">
+<div class="flex justify-between items-center">
+<span class="font-body-sm text-body-sm font-bold text-primary">23</span>
+<span class="w-1.5 h-1.5 rounded-full bg-pastel-cyan-base"></span>
+</div>
+<div class="mt-1 px-2 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold truncate shadow-sm">
+            🏆 Hackathon Demos
+          </div>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">24</span>
+</div>
+<!-- March 25 to 31 -->
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">25</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">26</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">27</span>
+</div>
+<!-- Mar 28: Spring Cultural Fest 2024 (Selected Active Highlight) -->
+<div class="min-h-[105px] p-2 rounded-xl bg-pastel-pink-tint hover:bg-pastel-pink-light/60 transition-all flex flex-col justify-between shadow-[0_4px_18px_rgba(244,114,182,0.35)] ring-2 ring-pastel-pink-base cursor-pointer">
+<div class="flex justify-between items-center">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-body-sm text-body-sm font-bold flex items-center justify-center">28</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">stars</span>
+</div>
+<div class="mt-1 px-2 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-bold truncate shadow-sm flex items-center gap-1">
+<span>🎉 Spring Cultural Fest</span>
+</div>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">29</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">30</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors flex flex-col">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">31</span>
+</div>
+<!-- Next Month Days (Apr 1 - 7) -->
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-wash/60 text-outline-variant flex flex-col justify-between opacity-50">
+<span class="font-body-sm text-body-sm font-medium">1</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-wash/60 text-outline-variant flex flex-col justify-between opacity-50">
+<span class="font-body-sm text-body-sm font-medium">2</span>
+</div>
+<!-- Apr 03: AI & Ethics Seminar -->
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-wash/80 text-outline-variant flex flex-col justify-between opacity-80 hover:opacity-100 transition-opacity">
+<span class="font-body-sm text-body-sm font-medium">3</span>
+<div class="mt-1 px-1.5 py-0.5 rounded bg-pastel-cyan-tint text-primary font-label-sm text-label-sm truncate font-medium">
+            AI &amp; Ethics (2:00 PM)
+          </div>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-wash/60 text-outline-variant flex flex-col justify-between opacity-50">
+<span class="font-body-sm text-body-sm font-medium">4</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-wash/60 text-outline-variant flex flex-col justify-between opacity-50">
+<span class="font-body-sm text-body-sm font-medium">5</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-wash/60 text-outline-variant flex flex-col justify-between opacity-50">
+<span class="font-body-sm text-body-sm font-medium">6</span>
+</div>
+<div class="min-h-[105px] p-2 rounded-xl bg-surface-wash/60 text-outline-variant flex flex-col justify-between opacity-50">
+<span class="font-body-sm text-body-sm font-medium">7</span>
+</div>
+</div>
+<!-- Footer Micro-legend -->
+<div class="flex flex-wrap items-center justify-between pt-3 text-on-surface-variant font-body-sm text-body-sm gap-2">
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-pastel-cyan-base"></span>Tech / Workshops</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-pastel-pink-base"></span>Arts &amp; Cultural</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-primary-fixed-dim"></span>Academic Seminars</span>
+</div>
+<div class="flex items-center gap-1 text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+          All timings in Eastern Daylight Time (EDT)
+        </div>
+</div>
+</div>
+<!-- Selected Day Preview Drawer & Spotlight (Span 4) -->
+<div class="xl:col-span-4 space-y-6">
+<!-- Selected Date Card Header -->
+<div class="bg-surface-clean rounded-2xl p-6 shadow-[0_4px_18px_-2px_rgba(125,211,252,0.15)] space-y-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-full bg-pastel-pink-tint flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">calendar_today</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Selected Date</p>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">March 28, 2024</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-pastel-pink-tint text-secondary font-label-md text-label-md font-bold">
+            1 Major Event
+          </span>
+</div>
+<!-- Featured Detailed Card: Spring Cultural Fest 2024 -->
+<div class="rounded-xl overflow-hidden bg-surface-wash shadow-sm hover:shadow-md transition-shadow">
+<!-- Card Image Showcase inspired by user festival photo -->
+<div class="relative h-44 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="A lively night campus cultural festival amphitheater stage illuminated with vibrant multi-colored stage lights and spotlights. Diverse university student performers in traditional colorful folk attire dance energetically on stage while an enthusiastic seated and cheering crowd watches from the stone tiered auditorium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRsL1Q4yHCZm01c6owYL8wSp39SuUDMw3buL3hEDfV_lG2tu9N9GxyzLEFYbMfnxZoxfI4_xFvXBgM-RrPph3Ar-HX5FxvnTNtpcH6aIIde9i8G4zf1B491VYo6UKDMCho20V7Zob1qlahjBlMGJCtBxm0kC3BZ-3PpWCwrOU9lkuhObq9O0tHG5Lk2LWNEUYjT2WCVPjnO6cc7_hGWStOpUbbXZDO1VCzTrp7mpQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/85 via-inverse-surface/20 to-transparent"></div>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-clean/90 backdrop-blur-md text-secondary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">stars</span> Star Headliner
+              </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 text-on-secondary">
+<p class="font-label-sm text-label-sm text-pastel-pink-light tracking-wide uppercase font-semibold">Annual Showcase</p>
+<h4 class="font-headline-sm text-headline-sm font-bold text-white drop-shadow-sm leading-tight">Spring Cultural Fest 2024</h4>
+</div>
+</div>
+<!-- Card Content Body -->
+<div class="p-4 space-y-4">
+<div class="grid grid-cols-2 gap-3 text-on-surface">
+<div class="flex items-center gap-2 bg-surface-clean p-2.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">schedule</span>
+<div>
+<span class="block font-label-sm text-label-sm text-outline">Timing</span>
+<span class="font-body-sm text-body-sm font-semibold">5:30 PM – 10:00 PM</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-clean p-2.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
+<div>
+<span class="block font-label-sm text-label-sm text-outline">Location</span>
+<span class="font-body-sm text-body-sm font-semibold">Open Amphitheater</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Experience dynamic multi-cultural dance showcases, live fusion acoustic bands, indie student short plays, and global cuisine stalls hosted across the central courtyard.
+            </p>
+<!-- Registration Capacity Gauge -->
+<div class="space-y-1.5 bg-surface-clean p-3 rounded-xl">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-semibold">Seat Reservations</span>
+<span class="text-secondary font-bold">482 / 600 Filled</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-pastel-pink-base rounded-full" style="width: 80%;"></div>
+</div>
+<p class="font-label-sm text-label-sm text-outline">80% booked • Free student admission with Campus ID</p>
+</div>
+<!-- Organizer Lockup & CTAs -->
+<div class="pt-2 flex items-center justify-between border-t border-border-subtle/0">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-pastel-cyan-tint text-primary flex items-center justify-center font-label-md text-label-md font-bold">
+                  CC
+                </div>
+<div class="leading-none">
+<span class="font-body-sm text-body-sm font-semibold block text-on-surface">Culture Council</span>
+<span class="font-label-sm text-label-sm text-outline">Verified Club</span>
+</div>
+</div>
+<!-- Quick Register CTA -->
+<button class="px-5 py-2.5 rounded-full bg-pastel-cyan-base hover:bg-pastel-cyan-light text-on-primary-fixed font-label-md text-label-md font-bold transition-all shadow-[0_4px_14px_rgba(125,211,252,0.45)] hover:shadow-lg flex items-center gap-1.5" type="button">
+<span>Quick Register</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Companion Preview: Prior Exhibition Feature (Inspired by Photography Expo in User Photo) -->
+<div class="bg-surface-clean rounded-2xl p-5 shadow-[0_4px_18px_-2px_rgba(125,211,252,0.15)] space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">photo_camera</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Earlier This Month</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Mar 15 – Mar 17</span>
+</div>
+<div class="flex gap-3 bg-surface-container-low p-3 rounded-xl items-center">
+<img class="w-20 h-20 rounded-lg object-cover shadow-sm flex-shrink-0" data-alt="Modern bright campus art gallery exhibition with white curved walls displaying framed monochrome street photography prints with undergraduate students exploring the gallery and discussing artwork." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh8YASLBJ8zTtm1GcREn1CwNkxWra316MKTDPyedPM_mluM4ytJFYGAWZXF8vQVy9Byhe3N8erE1ZkIJxgrK3uWkFoEsn0xCmSQvFOMQL4nR0o97DxdWZP8F2SL2FdOB5BbQFL-kAOXsTQYUNMmvQS6nZGfua1VgyLJ3f5grkriYw_6BCAuGormXHXNiTeYAoS3aer3aCKVJVGJjDUuRL1xCk_Cn0AhndQxcCI3TM"/>
+<div class="space-y-1 min-w-0">
+<h5 class="font-body-md text-body-md font-bold text-on-surface truncate">Framing Perspectives Gallery</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Fine Arts Hall 102 • 85 curated student prints. Gallery archive available online.</p>
+<a class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold hover:underline" href="#">
+<span>View Expo Catalog</span>
+<span class="material-symbols-outlined text-[14px]">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-Time Campus Room Availability / Facilities Strip -->
+<div class="bg-surface-clean rounded-2xl p-6 shadow-[0_4px_18px_-2px_rgba(125,211,252,0.15)] space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Live Venue &amp; Facility Status</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Check real-time occupancy and book open study or performance hubs.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-pastel-cyan-tint text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-pastel-cyan-base"></span> 4 Halls Available Now
+        </span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-1">
+<!-- Facility 1 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="space-y-0.5">
+<p class="font-body-sm text-body-sm font-bold text-on-surface">Campus Amphitheater</p>
+<p class="font-label-sm text-label-sm text-outline">Open Air • Cap 600</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-pastel-pink-tint text-secondary font-label-sm text-label-sm font-semibold">
+          Reserved (Fest)
+        </span>
+</div>
+<!-- Facility 2 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="space-y-0.5">
+<p class="font-body-sm text-body-sm font-bold text-on-surface">Gallery Hall A</p>
+<p class="font-label-sm text-label-sm text-outline">East Wing • Cap 120</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-pastel-cyan-tint text-primary font-label-sm text-label-sm font-semibold">
+          Open Access
+        </span>
+</div>
+<!-- Facility 3 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="space-y-0.5">
+<p class="font-body-sm text-body-sm font-bold text-on-surface">Turing Hack Lab</p>
+<p class="font-label-sm text-label-sm text-outline">Tech Center • Cap 80</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-pastel-cyan-tint text-primary font-label-sm text-label-sm font-semibold">
+          Workshop Ready
+        </span>
+</div>
+<!-- Facility 4 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between">
+<div class="space-y-0.5">
+<p class="font-body-sm text-body-sm font-bold text-on-surface">Auditorium B</p>
+<p class="font-label-sm text-label-sm text-outline">Main Quad • Cap 350</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+          Soundcheck
+        </span>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

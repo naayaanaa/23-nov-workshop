@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f8fbff">
+  <title>Campus Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./config.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#discover" aria-label="Campus Connect home"><span class="brand-mark">✳</span><span>CAMPUS <b>CONNECT</b></span></a><div class="top-actions"><span id="connection" class="connection"><i></i> Connecting</span><button id="identity-button" class="avatar" title="Set your user ID">?</button></div></header>
+  <aside class="sidebar"><div><p class="eyebrow">YOUR CAMPUS</p><nav aria-label="Main navigation"><a href="#discover" data-view="discover" class="nav-link active"><span>⌂</span> Discover events</a><a href="#registered" data-view="registered" class="nav-link"><span>✓</span> My registrations</a><a href="#organizer" data-view="organizer" class="nav-link"><span>▦</span> Organizer portal</a></nav><div class="identity-card"><span class="identity-icon">◎</span><div><strong>Your account</strong><small id="identity-label">Add a user ID to register</small></div><button id="edit-identity" aria-label="Set user ID">↗</button></div></div><div class="side-foot">CAMPUS CONNECT <span>EVENTS, TOGETHER</span></div></aside>
+  <main class="main"><div class="content">
+    <section id="view-discover" class="view">
+      <div class="hero"><div class="hero-copy"><span class="kicker"><i></i> YOUR CAMPUS, IN MOTION</span><h1>Find your next<br><em>big moment.</em></h1><p>Explore what’s happening around campus and save your spot.</p><a class="hero-link" href="#event-list">Browse events <span>↓</span></a></div><div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="art-note">MAKE IT<br>HAPPEN <b>↗</b></div><div class="art-line"></div><span class="art-star">✳</span></div></div>
+      <div class="section-heading" id="event-list"><div><span class="eyebrow">WHAT’S ON</span><h2>Explore events</h2></div><button class="quiet-button" id="refresh-events">↻ <span>Refresh</span></button></div>
+      <div class="toolbar"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search events by name…" aria-label="Search events"></label><label class="filter"><span>Show</span><select id="status-filter"><option value="">All events</option><option value="open">Open</option><option value="active">Active</option><option value="published">Published</option></select></label></div>
+      <div id="events" class="event-grid" aria-live="polite"></div>
+    </section>
+    <section id="view-registered" class="view hidden"><div class="page-heading"><span class="eyebrow">YOUR CAMPUS JOURNEY</span><h1>My registrations</h1><p>Events you’ve signed up for, all in one place.</p></div><div id="registrations" class="stack" aria-live="polite"></div></section>
+    <section id="view-organizer" class="view hidden"><div class="page-heading"><span class="eyebrow">ORGANIZER TOOLS</span><h1>Attendee lookup</h1><p>Choose one of your events to view its registered attendees.</p></div><div class="panel organizer-panel"><label>Organizer ID<input id="organizer-id" placeholder="Organizer UUID" autocomplete="off"></label><label>Event<select id="organizer-event"><option value="">Load events first</option></select></label><button class="button primary" id="load-attendees">View attendees <span>→</span></button></div><div id="attendees" class="stack" aria-live="polite"></div><p class="hint">The API checks that this ID belongs to the selected event’s organizer.</p></section>
+    <footer>Made for the moments that bring us together <span>✳</span></footer>
+  </div></main>
+  <dialog id="identity-dialog"><form method="dialog" id="identity-form"><button class="dialog-close" value="cancel" aria-label="Close">×</button><span class="eyebrow">CAMPUS CONNECT</span><h2>Set your account ID</h2><p>Use the UUID for your user record. The API uses it to create and find registrations.</p><label>User ID<input id="user-id" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" autocomplete="off" required></label><div class="dialog-actions"><button class="button secondary" value="cancel">Cancel</button><button class="button primary" id="save-identity" value="default">Save ID <span>→</span></button></div></form></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
